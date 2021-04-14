@@ -21,7 +21,7 @@ const energyMessage = () => {
         energyMix.biomass.proportion +
         energyMix.hydro.proportion +
         energyMix.nuclear.proportion;
-      if (currentGreenEnergyProportion > 0.5) {
+      if (currentGreenEnergyProportion > 0.45) {
         const currentTime = new Date();
         const timeElapsedSincePreviousMessage = getDifferenceInHours(
           currentTime,

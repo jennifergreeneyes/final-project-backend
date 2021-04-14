@@ -2,8 +2,10 @@ module.exports = (connection, DataTypes) => {
   const schema = {
     email: DataTypes.STRING,
     phone: DataTypes.STRING,
-    password: DataTypes.STRING,
-    subscribe: DataTypes.BOOLEAN,
+    subscribe: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
   };
   const SubscriberModel = connection.define('Subscriber', schema);
   return SubscriberModel;
