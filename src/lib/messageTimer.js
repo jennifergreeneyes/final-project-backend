@@ -9,9 +9,9 @@ const getDifferenceInHours = (date2, date1) => {
   return Math.abs(Math.round(diff));
 };
 
-const currentHour = new Date().getHours();
-
 const energyMessage = () => {
+  const currentHour = new Date().getHours();
+  console.log(currentHour);
   if (currentHour >= 7 && currentHour <= 20) {
     axios.get('https://api.reactive.energy/energy-mix').then((res) => {
       const energyMix = res.data;
