@@ -6,6 +6,7 @@ module.exports = (connection, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
     },
+    messageSent: DataTypes.DATE,
   };
   const SubscriberModel = connection.define('Subscriber', schema);
   return SubscriberModel;
