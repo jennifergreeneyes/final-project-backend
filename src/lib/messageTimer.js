@@ -25,7 +25,7 @@ const energyMessage = () => {
         energyMix.hydro.proportion +
         energyMix.nuclear.proportion;
 
-      if (currentGreenEnergyProportion > 0.3) {
+      if (currentGreenEnergyProportion > 0.45) {
         const currentTime = new Date();
         Subscriber.findAll({
           where: {
@@ -59,7 +59,7 @@ const energyMessage = () => {
               .then((subscribers) => {
                 messageSender.sendMessageToSubscribers(
                   subscribers,
-                  `From test app: Current low carbon energy proportion is ${Math.floor(
+                  `Current low carbon energy proportion is ${Math.floor(
                     currentGreenEnergyProportion * 100
                   )}%. You are an eco-champion!`
                 );
